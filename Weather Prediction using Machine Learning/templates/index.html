@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img class="lg:h-30 md:h-15 w-full" src="logo 3.png" alt="" />
+        <h1 class="ml-3 style='text-align:center;' text-4xl">Weather App</h1>
+      </a>
+    </div>
+  </header>
+    <p class="leading-relaxed text-center text-2xl text-gray-900">1: Mumbai, 2: Calcutta<br><br>3: Chennai, 4: Delhi</p>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                City <input type="number" name='State' placeholder="Enter City No"><br>
+                Month <input type="number" name='Month' placeholder="Enter Month"><br>
+                Date <input type="number" name='Day' placeholder="Enter Date"><br>
+                Year <input type="number" name='Year' placeholder="Enter year"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> Average Temp is: {{data}}</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
