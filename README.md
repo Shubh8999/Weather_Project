@@ -1,12 +1,16 @@
-How to Run
-Clone the repository to your local machine:
+### How to Run
 
-git clone https://github.com/Shubh8999/Gym-Website/
-In order to start the frontend Server
+1. Clone the repository to your local machine:
 
-npm start
-In order to start the backend server
+   ```bash
+   git clone https://github.com/Shubh8999/Weather_Project.git
 
-npm run dev
+2. In order to start the Django project, open Weather App with Python Django folder
+   
+   ```bash
+   python manage.py runserver
 
-Home Login Products 
+4. In order to start the ML project, open Weather Prediction using Machine Learning folder
+   
+   ```bash
+   flask run
